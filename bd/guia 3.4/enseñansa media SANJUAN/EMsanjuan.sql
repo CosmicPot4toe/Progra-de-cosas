@@ -159,11 +159,9 @@ INSERT INTO alumno VALUES(2221,13998111,'1','FRANCISCO','JAVIER','ZÁRATE','DONOS
     INSERT INTO nota_alumno VALUES(2221,1214,7,7,7,7,NULL);
     INSERT INTO nota_alumno VALUES(2221,1215,4.6,5.5,5.6,6.6,NULL);
 
+SELECT ASA.* FROM asistencia_alumno ASA, alumno A WHERE A.pnombre='FRANCISCO' AND A.appat='ZÁRATE' AND ASA.cod_alumno = A.cod_alumno;
 
+SELECT NA.* FROM nota_alumno NA, alumno A WHERE A.pnombre='FRANCISCA' AND A.appat='PEÑA' AND NA.cod_alumno = A.cod_alumno;
 
-
-
-
-
-
+SELECT ASA.*, A.pnombre, A.appat FROM asistencia_alumno ASA, alumno A WHERE porc_asistencia=100 AND ASA.cod_alumno = A.cod_alumno;
 
